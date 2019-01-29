@@ -6,7 +6,7 @@
 #include <string.h>
 
 
-
+int print_big(int x);
 
 int main(){
 
@@ -80,10 +80,42 @@ int main(){
 
     printf("10! ist %d.\n", factorial);
 
+    /* Uebung 4*/
+    int zahlen[]={1,7,4,5,9,3,5,11,6,3,4};
+    int j = 0;
 
-    
+    while( j < 10){
+
+
+         if(zahlen[j]< 5){
+             j++;
+             continue;
+
+         }
+
+         if(zahlen[j] > 10){
+             break;
+         }
+
+         printf("%d\n", zahlen[j]);
+            j++;
+    }
+
+    int smarray[] ={1,11,2,22,3,33};
+        int q;
+        for(int q = 0; q < 6; q ++){
+            print_big(smarray[q]);
+        }
 
     return 0;
 }
 
+    int print_big(int x){
+
+        if(x > 10){
+
+            printf("%d ist groß\n", x);
+         }
+        return x;
+    }
 
