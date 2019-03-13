@@ -8,6 +8,13 @@
 
 int print_big(int x);
 
+
+int sum1 (int num){
+    static int total = 0;
+    total += num;
+    return total;
+}
+
 int main(){
 
     /* hello */
@@ -106,8 +113,15 @@ int main(){
         for(int q = 0; q < 6; q ++){
             print_big(smarray[q]);
         }
+    /* Uebung 5 */
+
+
+    printf("%d ",sum1(55));
+    printf("%d ",sum1(45));
+    printf("%d ",sum1(50));
 
     return 0;
+
 }
 
     int print_big(int x){
